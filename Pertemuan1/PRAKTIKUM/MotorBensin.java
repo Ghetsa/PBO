@@ -23,19 +23,12 @@ public class MotorBensin extends Motor {
   }
 
   public void isiBensin(int increment) {
-    // System.out.println("---------------------------------");
-    // if (bensin == kapasitasBensin) {
-    //   // System.out.println("Baterai sudah penuh");
-    // } else 
     bensinSekarang(); 
     if (bensin + increment <= kapasitasBensin) {
       bensin += increment;
-      // System.out.println("|Mengisi daya selesai: " + bensin + "%\t|");
     } else if (bensin + increment >= kapasitasBensin) {
       bensin = kapasitasBensin;
-      // System.out.println("Mengisi daya selesai: " + bensin + "%\n");
     }
-    // System.out.println("---------------------------------");
     updatePersenBensin();
   }
 

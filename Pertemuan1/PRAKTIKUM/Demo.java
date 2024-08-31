@@ -1,5 +1,4 @@
 package PRAKTIKUM;
-
 public class Demo {
     public static void main(String[] args) {
         Laptop laptop1 = new Laptop();
@@ -7,17 +6,16 @@ public class Demo {
         MotorBensin mb1 = new MotorBensin();
         MotorListrik ml1 = new MotorListrik();
 
-
         laptop1.setMerk("Lenovo");
         laptop1.nyalakan();
         laptop1.setUkuranLayar(15);
         laptop1.setKecerahanLayar(50);
         laptop1.setKapasitasBaterai(4000);
         laptop1.setPersenBaterai(40);
+        laptop1.cetakStatus();
         laptop1.tambahKecerahan(5);
         laptop1.isiDaya(20);
         laptop1.cetakStatus();
-
 
         sp1.setMerk("Oppo");
         sp1.setUkuranLayar(6.5);
@@ -45,11 +43,11 @@ public class Demo {
         ml1.setPersenBaterai(50);
         ml1.cetakStatus();
         ml1.nyalakan();
-        ml1.isiDaya(1000);
+        ml1.isiBaterai(1000);
         ml1.cetakStatus();
-        ml1.gas(20);
+        ml1.gas(33);
         ml1.cetakStatus();
-
+        ml1.rem(20);
+        ml1.cetakStatus();
     }
-
 }

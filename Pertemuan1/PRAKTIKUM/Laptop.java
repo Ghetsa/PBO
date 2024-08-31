@@ -43,24 +43,19 @@ public class Laptop {
   }
 
   public void isiDaya(int increment) {
-    // System.out.println("---------------------------------");
     if (persentaseBaterai == 100) {
-      // System.out.println("Baterai sudah penuh");
     } else if (persentaseBaterai + increment <= 100) {
       persentaseBaterai += increment;
-      // System.out.println("|Mengisi daya selesai: " + persentaseBaterai + "%\t|");
     } else if (persentaseBaterai + increment >= 100) {
       persentaseBaterai = 100;
-      // System.out.println("Mengisi daya selesai: " + persentaseBaterai + "%\n");
     }
-    // System.out.println("---------------------------------");
 
   }
 
   public void cetakStatus() {
     System.out.println("---------------------------------");
     System.out.println("Merk                : " + merk);
-    System.out.println("Power               : " + power);
+    System.out.println("Power               : " + (power ? "Hidup" : "Mati"));
     System.out.println("Ukuran Layar        : " + ukuranLayar + "inci");
     System.out.println("Kecerahan Layar     : " + kecerahanLayar + "%");
     System.out.println("Kapasitas Baterai   : " + kapasitasBaterai);
